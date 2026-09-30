@@ -5,7 +5,6 @@ import Header from '@/components/Header';
 import VideoIntro from '@/components/VideoIntro';
 import NameReveal from '@/components/NameReveal';
 import AboutSection from '@/components/AboutSection';
-import ResumeSection from '@/components/ResumeSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import BlogSection from '@/components/BlogSection';
 import TechStack from '@/components/TechStack';
@@ -31,10 +30,7 @@ export default function Home() {
       {/* About Section with Typewriter Bio & Metric Counters */}
       <AboutSection />
 
-      {/* Recruiter Showcase & Flagship Project Resume Section */}
-      <ResumeSection />
-
-      {/* Projects Showcase */}
+      {/* Flagship Quick-Commerce Dark Store System Showcase */}
       <ProjectsSection />
 
       {/* Technical Engineering Blog Section */}
