@@ -107,25 +107,35 @@ export default function SocialStats() {
                 PINNED REPOSITORIES
               </p>
               <div className="flex flex-col gap-2.5">
-                <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#FF6B35]/30 transition-colors">
+                <a
+                  href="https://github.com/NeelBelsare/my-dark-store-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#FF6B35]/40 transition-colors block"
+                >
                   <div className="flex items-center justify-between text-xs font-semibold text-white">
-                    <span>auto-agent-core</span>
-                    <span className="text-[10px] text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">Python</span>
+                    <span>my-dark-store-app</span>
+                    <span className="text-[10px] text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">Python / FastAPI</span>
                   </div>
                   <p className="text-[11px] text-white/40 mt-1">
-                    Autonomous multi-agent orchestration with LangChain &amp; Qdrant.
+                    AI-Powered Dark Store Command Center &amp; Real-Time Dispatch Ecosystem (v4.0 Production).
                   </p>
-                </div>
+                </a>
 
-                <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#FF6B35]/30 transition-colors">
+                <a
+                  href="https://github.com/NeelBelsare/my-dark-store-app/tree/main/mobile-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#FF6B35]/40 transition-colors block"
+                >
                   <div className="flex items-center justify-between text-xs font-semibold text-white">
-                    <span>next-fullstack-starter</span>
-                    <span className="text-[10px] text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-full">TypeScript</span>
+                    <span>quick-commerce-mobile</span>
+                    <span className="text-[10px] text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-full">React Native / Expo</span>
                   </div>
                   <p className="text-[11px] text-white/40 mt-1">
-                    Enterprise SaaS boilerplate with App Router, Auth, and Stripe.
+                    Blinkit consumer mobile app with OSRM turn-by-turn road navigation &amp; rider partner mode.
                   </p>
-                </div>
+                </a>
               </div>
             </div>
           </div>

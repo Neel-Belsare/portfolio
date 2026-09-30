@@ -93,10 +93,10 @@ export default function AboutSection() {
           <div className="flex items-center">
             <div className="px-8 first:pl-0 text-center md:text-left">
               <p className="text-5xl font-extrabold text-[#FF6B35] font-orbitron">
-                2+
+                12
               </p>
               <p className="text-xs text-black/50 tracking-wider mt-1 uppercase font-inter font-medium">
-                Years Experience
+                Dark Store Hubs
               </p>
             </div>
             <div className="w-px h-12 bg-black/15" />
@@ -105,10 +105,10 @@ export default function AboutSection() {
           <div className="flex items-center">
             <div className="px-8 text-center md:text-left">
               <p className="text-5xl font-extrabold text-[#FF6B35] font-orbitron">
-                15+
+                &lt;12m
               </p>
               <p className="text-xs text-black/50 tracking-wider mt-1 uppercase font-inter font-medium">
-                Projects Shipped
+                Delivery SLA
               </p>
             </div>
             <div className="w-px h-12 bg-black/15" />
@@ -117,10 +117,10 @@ export default function AboutSection() {
           <div className="flex items-center">
             <div className="px-8 text-center md:text-left">
               <p className="text-5xl font-extrabold text-[#FF6B35] font-orbitron">
-                6+
+                v4.0
               </p>
               <p className="text-xs text-black/50 tracking-wider mt-1 uppercase font-inter font-medium">
-                AI Systems Built
+                Production Release
               </p>
             </div>
           </div>
