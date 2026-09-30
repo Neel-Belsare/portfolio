@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/asset';
 
 export default function NameReveal() {
   return (
@@ -24,7 +25,7 @@ export default function NameReveal() {
       {/* Floating Portrait Cutout on the Right */}
       <div className="pointer-events-none absolute right-4 md:right-16 bottom-0 z-10 hidden md:flex items-end justify-center h-[90%] w-auto max-w-[50%]">
         <img
-          src="/images/portrait-cutout.png"
+          src={getAssetPath('/images/portrait-cutout.png')}
           alt="Neel Belsare"
           className="h-full w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.35)] select-none filter contrast-[1.05]"
         />

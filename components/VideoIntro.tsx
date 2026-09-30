@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { Volume2, VolumeX, Play, Pause, ChevronDown, Sparkles } from 'lucide-react';
+import { getAssetPath } from '@/lib/asset';
 
 export default function VideoIntro() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -53,8 +54,8 @@ export default function VideoIntro() {
       {/* Background Video */}
       <video
         ref={videoRef}
-        src="/video/hero.mp4"
-        poster="/video/hero-poster.jpg"
+        src={getAssetPath('/video/hero.mp4')}
+        poster={getAssetPath('/video/hero-poster.jpg')}
         autoPlay
         muted
         loop

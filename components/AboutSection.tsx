@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Twitter, ArrowUpRight } from 'lucide-react';
+import { getAssetPath } from '@/lib/asset';
 
 export default function AboutSection() {
   const fullText = "Full Stack Engineer with 2+ years of experience building scalable web and AI-powered systems using React, Next.js, TypeScript, and Node.js. Specialized in modern frontend architecture, high-throughput microservices, and production-ready applications with an obsession for performance and clean code. Architecting AI-integrated platforms and agentic workflows as the next computational frontier.";
@@ -24,7 +25,7 @@ export default function AboutSection() {
       <div className="flex flex-col justify-end p-8 md:sticky md:top-0 md:h-screen md:pb-12 md:pl-12">
         <div className="rounded-2xl overflow-hidden shadow-2xl w-full max-w-[320px] h-[430px] border border-black/10 bg-white">
           <img
-            src="/images/portrait-headshot.png"
+            src={getAssetPath('/images/portrait-headshot.png')}
             alt="Neel Belsare"
             className="w-full h-full object-cover object-top filter contrast-[1.03]"
           />

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Github, Linkedin, ExternalLink, Code2, Flame, GitPullRequest, GitCommit, CheckCircle2 } from 'lucide-react';
+import { getAssetPath } from '@/lib/asset';
 
 export default function SocialStats() {
   return (
@@ -35,7 +36,7 @@ export default function SocialStats() {
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white/15 bg-white/5 flex items-center justify-center">
                     <img
-                      src="/images/portrait-headshot.png"
+                      src={getAssetPath('/images/portrait-headshot.png')}
                       alt="Neel Belsare"
                       className="w-full h-full object-cover object-top"
                     />
