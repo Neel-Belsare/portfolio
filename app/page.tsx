@@ -7,6 +7,7 @@ import NameReveal from '@/components/NameReveal';
 import AboutSection from '@/components/AboutSection';
 import ResumeSection from '@/components/ResumeSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import BlogSection from '@/components/BlogSection';
 import TechStack from '@/components/TechStack';
 import ExperienceSection from '@/components/ExperienceSection';
 import SocialStats from '@/components/SocialStats';
@@ -35,6 +36,9 @@ export default function Home() {
 
       {/* Projects Showcase */}
       <ProjectsSection />
+
+      {/* Technical Engineering Blog Section */}
+      <BlogSection />
 
       {/* Interactive Tech Stack Matrix */}
       <TechStack />
