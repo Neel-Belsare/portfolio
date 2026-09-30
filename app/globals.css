@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@600;700;800;900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-dancing: 'Dancing Script', cursive;
+  --font-inter: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0a0a0c;
+  color: #ffffff;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #0a0a0c;
+  overflow-x: hidden;
+  selection-background-color: #FF6B35;
+  selection-color: #ffffff;
+}
+
+::selection {
+  background: #FF6B35;
+  color: #000000;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 53, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 53, 0.7);
+}
+
+/* Kinetic scanline & subtle noise overlay */
+.cinematic-grid {
+  background-image: radial-gradient(rgba(255, 107, 53, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.glow-orange {
+  box-shadow: 0 0 35px -5px rgba(255, 107, 53, 0.35);
+}
+
+.glow-violet {
+  box-shadow: 0 0 35px -5px rgba(139, 92, 246, 0.3);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.05); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
