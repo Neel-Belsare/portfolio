@@ -5,9 +5,10 @@ import Header from '@/components/Header';
 import VideoIntro from '@/components/VideoIntro';
 import NameReveal from '@/components/NameReveal';
 import AboutSection from '@/components/AboutSection';
+import ResumeSection from '@/components/ResumeSection';
+import ProjectsSection from '@/components/ProjectsSection';
 import TechStack from '@/components/TechStack';
 import ExperienceSection from '@/components/ExperienceSection';
-import ProjectsSection from '@/components/ProjectsSection';
 import SocialStats from '@/components/SocialStats';
 import Footer from '@/components/Footer';
 import ContactModal from '@/components/ContactModal';
@@ -29,14 +30,17 @@ export default function Home() {
       {/* About Section with Typewriter Bio & Metric Counters */}
       <AboutSection />
 
+      {/* Recruiter Showcase & Flagship Project Resume Section */}
+      <ResumeSection />
+
+      {/* Projects Showcase */}
+      <ProjectsSection />
+
       {/* Interactive Tech Stack Matrix */}
       <TechStack />
 
       {/* Experience History Timeline */}
       <ExperienceSection />
-
-      {/* Projects Showcase */}
-      <ProjectsSection />
 
       {/* GitHub & Engineering Stats */}
       <SocialStats />

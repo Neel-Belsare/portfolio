@@ -21,7 +21,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
       }
 
       // Check section in view
-      const sections = ['hero', 'name-reveal', 'about', 'techstack', 'experience', 'projects', 'social-stats'];
+      const sections = ['hero', 'name-reveal', 'about', 'resume', 'projects', 'techstack', 'experience', 'social-stats'];
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -49,9 +49,10 @@ export default function Header({ onOpenContact }: HeaderProps) {
   const navItems = [
     { label: 'Home', id: 'hero' },
     { label: 'About', id: 'about' },
+    { label: 'Resume', id: 'resume' },
+    { label: 'Projects', id: 'projects' },
     { label: 'Tech', id: 'techstack' },
     { label: 'Experience', id: 'experience' },
-    { label: 'Projects', id: 'projects' },
   ];
 
   return (

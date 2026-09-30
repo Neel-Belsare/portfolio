@@ -20,6 +20,17 @@ export default function ProjectsSection() {
 
   const projects: Project[] = [
     {
+      title: 'Quick-Commerce Dark Store Hub',
+      category: 'AI',
+      kind: 'Autonomous Dispatch & 3D Ops Monorepo',
+      description: 'Production-grade 5-tier quick-commerce ecosystem with FastAPI autonomous dispatch, Serpentine warehouse pick-path routing, 3D PyDeck spatial telemetry, and React Native road tracking.',
+      tags: ['FastAPI', 'PyDeck 3D', 'Supabase', 'React Native', 'PostGIS', 'OSRM'],
+      featured: true,
+      color: '#FF6B35',
+      demoUrl: 'https://my-dark-store-app.streamlit.app/',
+      githubUrl: 'https://github.com/NeelBelsare/my-dark-store-app',
+    },
+    {
       title: 'AutoAgent Pro',
       category: 'AI',
       kind: 'Autonomous Agent Platform',
