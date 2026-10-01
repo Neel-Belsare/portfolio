@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="100%" height="100%">
+  <defs>
+    <!-- Dark Canvas Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14141B"/>
+      <stop offset="100%" stop-color="#181822"/>
+    </linearGradient>
+
+    <!-- Card Background Gradients -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E1E2A"/>
+      <stop offset="100%" stop-color="#1A1A24"/>
+    </linearGradient>
+
+    <linearGradient id="supaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#191B24"/>
+      <stop offset="100%" stop-color="#161820"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="lavenderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B82F6"/>
+      <stop offset="100%" stop-color="#6E68B8"/>
+    </linearGradient>
+
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EDE6DC"/>
+      <stop offset="100%" stop-color="#C5BCAE"/>
+    </linearGradient>
+
+    <!-- Card Elevation Drop Shadow -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#05050A" flood-opacity="0.6"/>
+    </filter>
+    <filter id="pillShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Marker Arrowheads -->
+    <marker id="arrowLavender" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#8B82F6"/>
+    </marker>
+    <marker id="arrowEmerald" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="720" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(600, 48)">
+    <text text-anchor="middle" font-family="'Plus Jakarta Sans', Inter, -apple-system, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="-0.02em">
+      QUICK-COMMERCE SYSTEM ARCHITECTURE &amp; DATA PIPELINE
+    </text>
+    <text text-anchor="middle" y="24" font-family="'Plus Jakarta Sans', Inter, -apple-system, sans-serif" font-size="12" fill="#9696A8">
+      End-to-End Real-Time Topology • Chhatrapati Sambhajinagar (Aurangabad) Ecosystem
+    </text>
+  </g>
+
+  <!-- CONNECTIONS & ARROWS (Drawn behind cards) -->
+  <!-- Line 1: Mobile App -> Supabase -->
+  <path d="M 310, 310 L 310, 370" stroke="#8B82F6" stroke-width="2.5" stroke-dasharray="6,4" fill="none" marker-end="url(#arrowLavender)"/>
+  <!-- Line 2: Command Center -> Supabase -->
+  <path d="M 890, 310 L 890, 370" stroke="#8B82F6" stroke-width="2.5" stroke-dasharray="6,4" fill="none" marker-end="url(#arrowLavender)"/>
+  <!-- Line 3: FastAPI -> Supabase -->
+  <path d="M 600, 530 L 600, 580" stroke="#10B981" stroke-width="2.5" stroke-dasharray="6,4" fill="none" marker-start="url(#arrowEmerald)"/>
+
+  <!-- ========================================== -->
+  <!-- CARD 1: Mobile App (React Native Expo)     -->
+  <!-- ========================================== -->
+  <g transform="translate(50, 95)" filter="url(#cardShadow)">
+    <rect width="520" height="215" rx="18" fill="url(#cardGrad)" stroke="#8B82F6" stroke-width="1.8"/>
+    <line x1="20" y1="46" x2="500" y2="46" stroke="#8B82F6" stroke-opacity="0.3" stroke-width="1"/>
+    
+    <!-- Title & Badge -->
+    <text x="24" y="32" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="800" font-size="15" fill="#FFFFFF">
+      📱 Mobile App (React Native Expo)
+    </text>
+    <rect x="360" y="16" width="136" height="22" rx="11" fill="#2C2A44" stroke="#8B82F6" stroke-width="1"/>
+    <text x="428" y="31" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700" font-size="10" fill="#C4BFFB" text-anchor="middle">
+      CONSUMER &amp; RIDER
+    </text>
+
+    <!-- Sub-bullets -->
+    <g transform="translate(24, 70)" font-family="Inter, sans-serif" font-size="11.5" fill="#D4D4E2" font-weight="500">
+      <text y="0"><tspan fill="#8B82F6">📍</tspan>  <tspan font-weight="700" fill="#FFFFFF">useCurrentLocation</tspan>: High-precision GPS lock via Expo Location</text>
+      <text y="28"><tspan fill="#8B82F6">🛒</tspan>  <tspan font-weight="700" fill="#FFFFFF">CheckoutScreen</tspan>: Blinkit UI, Cart, Live Bill Summary &amp; SLA</text>
+      <text y="56"><tspan fill="#8B82F6">🛵</tspan>  <tspan font-weight="700" fill="#FFFFFF">RiderScreen</tspan>: Courier Partner Stepper (Accept → Pick → Deliver)</text>
+      <text y="84"><tspan fill="#8B82F6">🛣️</tspan>  <tspan font-weight="700" fill="#FFFFFF">RealDeliveryMap</tspan>: OSRM Road Navigation &amp; Turn-by-Turn HUD</text>
+      <text y="112"><tspan fill="#8B82F6">☁️</tspan>  <tspan font-weight="700" fill="#FFFFFF">Direct Supabase REST</tspan>: Zero-downtime offline-first Cloud Sync</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- CARD 2: Streamlit Command Center (app.py)  -->
+  <!-- ========================================== -->
+  <g transform="translate(630, 95)" filter="url(#cardShadow)">
+    <rect width="520" height="215" rx="18" fill="url(#cardGrad)" stroke="#8B82F6" stroke-width="1.8"/>
+    <line x1="20" y1="46" x2="500" y2="46" stroke="#8B82F6" stroke-opacity="0.3" stroke-width="1"/>
+
+    <!-- Title & Badge -->
+    <text x="24" y="32" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="800" font-size="15" fill="#FFFFFF">
+      🖥️ Streamlit Command Center (app.py)
+    </text>
+    <rect x="352" y="16" width="144" height="22" rx="11" fill="#2C2A44" stroke="#8B82F6" stroke-width="1"/>
+    <text x="424" y="31" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700" font-size="10" fill="#C4BFFB" text-anchor="middle">
+      ANALYTICS &amp; CONTROL
+    </text>
+
+    <!-- Sub-bullets -->
+    <g transform="translate(24, 70)" font-family="Inter, sans-serif" font-size="11.5" fill="#D4D4E2" font-weight="500">
+      <text y="0"><tspan fill="#8B82F6">🌐</tspan>  <tspan font-weight="700" fill="#FFFFFF">3D PyDeck Telemetry</tspan>: ArcLayer vector flight path &amp; hub pulses</text>
+      <text y="28"><tspan fill="#8B82F6">🗺️</tspan>  <tspan font-weight="700" fill="#FFFFFF">GeoJSON Zones</tspan>: Real-world service catchment polygons</text>
+      <text y="56"><tspan fill="#8B82F6">📦</tspan>  <tspan font-weight="700" fill="#FFFFFF">Tab 7: Smart Inventory</tspan>: Real-time SKU stockout detection</text>
+      <text y="84"><tspan fill="#8B82F6">🛵</tspan>  <tspan font-weight="700" fill="#FFFFFF">Dispatch Telemetry</tspan>: In-transit rider marker &amp; route simulation</text>
+      <text y="112"><tspan fill="#8B82F6">⚡</tspan>  <tspan font-weight="700" fill="#FFFFFF">Cloud Live Stream</tspan>: Instant Supabase Order sync &amp; 1-click reset</text>
+    </g>
+  </g>
+
+  <!-- Mid-Level Connector Badges -->
+  <g transform="translate(310, 340)" filter="url(#pillShadow)">
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="#222036" stroke="#8B82F6" stroke-width="1"/>
+    <text text-anchor="middle" y="4" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700" font-size="10" fill="#FFFFFF">
+      Order Dispatch / Sync ➔
+    </text>
+  </g>
+  <g transform="translate(890, 340)" filter="url(#pillShadow)">
+    <rect x="-95" y="-12" width="190" height="24" rx="12" fill="#222036" stroke="#8B82F6" stroke-width="1"/>
+    <text text-anchor="middle" y="4" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700" font-size="10" fill="#FFFFFF">
+      ⮂ Active Order Fetch &amp; Reset
+    </text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- CARD 3: Supabase Cloud Database            -->
+  <!-- ========================================== -->
+  <g transform="translate(100, 375)" filter="url(#cardShadow)">
+    <rect width="1000" height="150" rx="18" fill="url(#supaGrad)" stroke="#10B981" stroke-width="1.8"/>
+    <line x1="20" y1="42" x2="980" y2="42" stroke="#10B981" stroke-opacity="0.3" stroke-width="1"/>
+
+    <!-- Title & Badge -->
+    <text x="24" y="29" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="800" font-size="15" fill="#FFFFFF">
+      ⚡ Supabase Cloud Database (PostgreSQL + Realtime)
+    </text>
+    <rect x="735" y="14" width="240" height="22" rx="11" fill="#143224" stroke="#10B981" stroke-width="1"/>
+    <text x="855" y="29" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700" font-size="10" fill="#6EE7B7" text-anchor="middle">
+      CENTRAL PERSISTENCE &amp; EVENT BUS
+    </text>
+
+    <!-- Two-column Schema breakdown -->
+    <g transform="translate(24, 66)" font-family="Inter, sans-serif" font-size="11.5" fill="#D4D4E2" font-weight="500">
+      <!-- Col 1 -->
+      <text y="0"><tspan fill="#10B981">🏬</tspan>  <tspan font-weight="700" fill="#FFFFFF">stores</tspan>: 12 Pre-seeded Aurangabad fulfillment hubs &amp; GPS coordinates</text>
+      <text y="28"><tspan fill="#10B981">🛵</tspan>  <tspan font-weight="700" fill="#FFFFFF">riders</tspan>: 12 Couriers with live GPS telemetry, vehicle details &amp; ratings</text>
+      <text y="56"><tspan fill="#10B981">📦</tspan>  <tspan font-weight="700" fill="#FFFFFF">store_inventory</tspan>: SKU tracking, safety thresholds &amp; inter-hub rebalance</text>
+
+      <!-- Col 2 -->
+      <g transform="translate(500, 0)">
+        <text y="0"><tspan fill="#10B981">👥</tspan>  <tspan font-weight="700" fill="#FFFFFF">users</tspan>: Registered consumers, delivery addresses &amp; loyalty tiers</text>
+        <text y="28"><tspan fill="#10B981">📋</tspan>  <tspan font-weight="700" fill="#FFFFFF">orders &amp; order_items</tspan>: Single-active dispatch pipeline &amp; item lines</text>
+        <text y="56"><tspan fill="#10B981">⚡</tspan>  <tspan font-weight="700" fill="#FFFFFF">supabase_realtime</tspan>: Instant WebSocket event broadcast to all clients</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Mid-Level Connector Badge -->
+  <g transform="translate(600, 555)" filter="url(#pillShadow)">
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="#152B20" stroke="#10B981" stroke-width="1"/>
+    <text text-anchor="middle" y="4" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700" font-size="10" fill="#FFFFFF">
+      ⮁ Telemetry &amp; State Sync
+    </text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- CARD 4: FastAPI Dispatch Bridge            -->
+  <!-- ========================================== -->
+  <g transform="translate(180, 580)" filter="url(#cardShadow)">
+    <rect width="840" height="105" rx="18" fill="url(#cardGrad)" stroke="#EDE6DC" stroke-width="1.8"/>
+    <line x1="20" y1="36" x2="820" y2="36" stroke="#EDE6DC" stroke-opacity="0.3" stroke-width="1"/>
+
+    <!-- Title & Badge -->
+    <text x="24" y="25" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="800" font-size="14.5" fill="#FFFFFF">
+      ⚡ FastAPI Dispatch Bridge (api.py)
+    </text>
+    <rect x="615" y="10" width="205" height="20" rx="10" fill="#363128" stroke="#EDE6DC" stroke-width="1"/>
+    <text x="717" y="24" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700" font-size="9.5" fill="#E8DFD3" text-anchor="middle">
+      DISPATCH ENGINE &amp; REST API
+    </text>
+
+    <!-- Sub-bullets in 2 columns -->
+    <g transform="translate(24, 58)" font-family="Inter, sans-serif" font-size="11.5" fill="#D4D4E2" font-weight="500">
+      <text y="0"><tspan fill="#EDE6DC">🎯</tspan>  <tspan font-weight="700" fill="#FFFFFF">Haversine Nearest Routing</tspan>: Dark Store Catchment Matching</text>
+      <text y="24"><tspan fill="#EDE6DC">⏱️</tspan>  <tspan font-weight="700" fill="#FFFFFF">Dynamic ETA &amp; SLA</tspan>: Automated Courier Fleet Assignment</text>
+      
+      <g transform="translate(420, 0)">
+        <text y="0"><tspan fill="#EDE6DC">🏭</tspan>  <tspan font-weight="700" fill="#FFFFFF">S-Shape Warehouse Pick Path</tspan>: Optimized Picker Routing</text>
+        <text y="24"><tspan fill="#EDE6DC">📉</tspan>  <tspan font-weight="700" fill="#FFFFFF">Smart Inventory Auto-Decrement</tspan>: Multi-Order Route Batching</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Footer Watermark -->
+  <text x="600" y="706" text-anchor="middle" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-size="10" fill="#6E6E82">
+    Quick-Commerce v4.0 Production Stack • Engineered by Neel Belsare &amp; Mansi Gaike
+  </text>
+</svg>
