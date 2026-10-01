@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://neelbelsare.vercel.app'),
   title: 'Neel Belsare | Full-Stack Engineer & AI Systems',
   description: 'Portfolio of Neel Belsare — Full-Stack Engineer and AI Systems builder specializing in high-performance web platforms, Next.js, React, Node.js, and Agentic AI.',
   keywords: [
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Neel Belsare | Full-Stack Engineer & AI Systems',
     description: 'Building modern web experiences, scalable applications, and AI-powered digital products.',
+    url: 'https://neelbelsare.vercel.app',
     type: 'website',
   },
 };
