@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Twitter, ArrowUpRight } from 'lucide-react';
 import { getAssetPath } from '@/lib/asset';
 
 export default function AboutSection() {
-  const fullText = "Full Stack Engineer with 2+ years of experience building scalable web and AI-powered systems using React, Next.js, TypeScript, and Node.js. Specialized in modern frontend architecture, high-throughput microservices, and production-ready applications with an obsession for performance and clean code. Architecting AI-integrated platforms and agentic workflows as the next computational frontier.";
+  const fullText = "Undergraduate in Artificial Intelligence & Data Science with a minor in Business Analytics at MGM's Jawaharlal Nehru Engineering College (2024–2028). Passionate about moving beyond predictive models to prescriptive analytics and operations research—identifying specific actions businesses must take to maximize ROI, streamline logistics, and eliminate operational bottlenecks. Builder of end-to-end data pipelines, spatial optimization engines, and executive BI telemetry.";
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
 
@@ -38,7 +38,7 @@ export default function AboutSection() {
         {/* Social Icons */}
         <div className="flex items-center gap-4 mt-3 pl-2">
           <a
-            href="https://github.com/neelkiranbelsare"
+            href="https://github.com/Neel-Belsare"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xl text-black/40 hover:text-[#FF6B35] transition-colors"
@@ -47,7 +47,7 @@ export default function AboutSection() {
             <Github size={20} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/neel-belsare-16921a440/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xl text-black/40 hover:text-[#FF6B35] transition-colors"
@@ -56,7 +56,7 @@ export default function AboutSection() {
             <Linkedin size={20} />
           </a>
           <a
-            href="mailto:contact@neel.dev"
+            href="mailto:neelbelsaredpvn@gmail.com"
             className="text-xl text-black/40 hover:text-[#FF6B35] transition-colors"
             aria-label="Email"
           >
@@ -135,7 +135,7 @@ export default function AboutSection() {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
             <p className="text-sm text-black/70 font-medium">
-              Open to Full Stack &amp; AI Engineer opportunities · Building high-impact products
+              Open to Data Product Management, BI Engineering &amp; AI Analytics roles · Building high-impact systems
             </p>
           </div>
         </div>

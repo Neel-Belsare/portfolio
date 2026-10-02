@@ -107,7 +107,7 @@ export default function ResumeSection() {
                   Live Ops Center <ExternalLink size={14} />
                 </a>
                 <a
-                  href="https://github.com/NeelBelsare/my-dark-store-app"
+                  href="https://github.com/Neel-Belsare/dark-store"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-xl border border-white/10 bg-white/5 text-white/80 hover:text-white hover:border-[#FF6B35]/40 transition-colors"
@@ -356,10 +356,10 @@ export default function ResumeSection() {
 
             <div className="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
               <div className="text-xs text-white/50">
-                Target Roles: <strong>Software Engineering Intern, Full-Stack Intern, Backend Systems Intern</strong>
+                Target Roles: <strong>Data Product Manager, BI Engineer, Operations Research / Analytics Consultant, Data Scientist</strong>
               </div>
               <a
-                href="https://github.com/NeelBelsare/my-dark-store-app"
+                href="https://github.com/Neel-Belsare/dark-store"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-orbitron font-bold text-[#FF6B35] hover:underline flex items-center gap-1"

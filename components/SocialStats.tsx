@@ -43,16 +43,16 @@ export default function SocialStats() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white font-inter">
-                      neelkiranbelsare
+                      Neel-Belsare
                     </h3>
                     <p className="text-xs text-white/40 font-inter">
-                      github.com/neelkiranbelsare
+                      github.com/Neel-Belsare
                     </p>
                   </div>
                 </div>
 
                 <a
-                  href="https://github.com/neelkiranbelsare"
+                  href="https://github.com/Neel-Belsare"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full border border-[#FF6B35]/40 bg-[#FF6B35]/10 text-[#FF6B35] flex items-center justify-center hover:scale-105 transition-transform"
@@ -109,13 +109,13 @@ export default function SocialStats() {
               </p>
               <div className="flex flex-col gap-2.5">
                 <a
-                  href="https://github.com/NeelBelsare/my-dark-store-app"
+                  href="https://github.com/Neel-Belsare/dark-store"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#FF6B35]/40 transition-colors block"
                 >
                   <div className="flex items-center justify-between text-xs font-semibold text-white">
-                    <span>my-dark-store-app</span>
+                    <span>dark-store</span>
                     <span className="text-[10px] text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">Python / FastAPI</span>
                   </div>
                   <p className="text-[11px] text-white/40 mt-1">
@@ -124,17 +124,17 @@ export default function SocialStats() {
                 </a>
 
                 <a
-                  href="https://github.com/NeelBelsare/my-dark-store-app/tree/main/mobile-app"
+                  href="https://github.com/Neel-Belsare/portfolio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#FF6B35]/40 transition-colors block"
                 >
                   <div className="flex items-center justify-between text-xs font-semibold text-white">
-                    <span>quick-commerce-mobile</span>
-                    <span className="text-[10px] text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-full">React Native / Expo</span>
+                    <span>portfolio</span>
+                    <span className="text-[10px] text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-full">Next.js / TypeScript</span>
                   </div>
                   <p className="text-[11px] text-white/40 mt-1">
-                    Blinkit consumer mobile app with OSRM turn-by-turn road navigation &amp; rider partner mode.
+                    Personal engineering portfolio showcasing full-stack systems, 3D telemetry, and data products.
                   </p>
                 </a>
               </div>
@@ -205,20 +205,20 @@ export default function SocialStats() {
             <div className="space-y-3 py-2 text-xs text-white/70 font-inter">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={14} className="text-emerald-400" />
-                <span>Open for Full-Stack &amp; AI Engineering roles</span>
+                <span>Open for Data Product, BI &amp; Analytics roles</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={14} className="text-emerald-400" />
-                <span>Consulting &amp; High-velocity product contracts</span>
+                <span>Prescriptive analytics &amp; supply chain optimization</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={14} className="text-emerald-400" />
-                <span>Collaborating on AI Agentic open-source frameworks</span>
+                <span>Translating AI model metrics into business ROI</span>
               </div>
             </div>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/neel-belsare-16921a440/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 w-full py-3 rounded-xl bg-[#0077B5] text-white text-xs font-orbitron font-bold tracking-wider uppercase flex items-center justify-center gap-2 hover:bg-[#0077B5]/90 transition-colors shadow-lg"

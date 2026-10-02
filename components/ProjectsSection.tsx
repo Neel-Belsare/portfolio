@@ -123,7 +123,7 @@ export default function ProjectsSection() {
             </a>
 
             <a
-              href="https://github.com/NeelBelsare/my-dark-store-app"
+              href="https://github.com/Neel-Belsare/dark-store"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3 rounded-full border border-white/20 bg-white/5 text-white/80 text-xs sm:text-sm font-orbitron font-medium uppercase tracking-wider flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-white/40 transition-all"

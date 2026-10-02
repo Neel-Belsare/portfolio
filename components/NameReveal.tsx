@@ -38,7 +38,7 @@ export default function NameReveal() {
             Hi, I&apos;m
           </p>
           <p className="text-sm md:text-base tracking-[0.2em] text-black/65 font-medium mt-1">
-            Software Developer &amp; AI Systems Engineer
+            B.Tech AI &amp; Data Science · Minor in Business Analytics (MGM JNEC)
           </p>
         </div>
 
@@ -59,8 +59,8 @@ export default function NameReveal() {
 
         {/* Short personal ethos */}
         <p className="mt-8 text-black/80 max-w-lg text-sm md:text-base leading-relaxed font-inter font-normal">
-          Crafting intuitive, high-velocity web platforms and AI-driven architectures. 
-          Bridging the gap between robust engineering and cinematic user experiences.
+          Translating complex machine learning and prescriptive analytics into measurable business ROI. 
+          Bridging operations research, executive BI dashboards, and high-velocity full-stack platforms.
         </p>
 
         <div className="mt-8 flex items-center gap-4">

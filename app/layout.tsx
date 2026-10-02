@@ -3,12 +3,16 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://neelbelsare.vercel.app'),
-  title: 'Neel Belsare | Full-Stack Engineer & AI Systems',
-  description: 'Portfolio of Neel Belsare — Full-Stack Engineer and AI Systems builder specializing in high-performance web platforms, Next.js, React, Node.js, and Agentic AI.',
+  title: 'Neel Belsare | AI & Data Science · Business Analytics · Systems Architecture',
+  description: 'Portfolio of Neel Belsare — AI & Data Science undergraduate (Minor in Business Analytics) at MGM JNEC. Specializing in Prescriptive Analytics, Operations Research, BI Pipelines, and Full-Stack Systems.',
   keywords: [
     'Neel Belsare',
-    'Full Stack Engineer',
-    'AI Engineer',
+    'AI & Data Science',
+    'Business Analytics',
+    'Operations Research',
+    'Data Product Manager',
+    'Business Intelligence',
+    'Prescriptive Analytics',
     'Next.js',
     'React',
     'Node.js',
@@ -18,8 +22,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Neel Belsare' }],
   openGraph: {
-    title: 'Neel Belsare | Full-Stack Engineer & AI Systems',
-    description: 'Building modern web experiences, scalable applications, and AI-powered digital products.',
+    title: 'Neel Belsare | AI & Data Science · Business Analytics · Systems Architecture',
+    description: 'Translating AI metrics to business ROI with prescriptive analytics, spatial optimization, and scalable web platforms.',
     url: 'https://neelbelsare.vercel.app',
     type: 'website',
   },

@@ -15,26 +15,26 @@ interface ExperienceItem {
 export default function ExperienceSection() {
   const experiences: ExperienceItem[] = [
     {
-      period: '2025 – PRESENT',
-      role: 'Full-Stack & AI Systems Engineer',
-      company: 'Autonomous Projects & Tech Ventures',
-      description: 'Architecting end-to-end full stack web platforms and agentic AI systems. Leading development on high-performance SaaS applications, custom LLM pipelines, and vector database integrations.',
-      skills: ['Next.js 14', 'TypeScript', 'LangChain', 'FastAPI', 'Node.js', 'PostgreSQL', 'Docker'],
+      period: '2024 – 2028',
+      role: 'B.Tech in Artificial Intelligence & Data Science (Minor in Business Analytics)',
+      company: "MGM's Jawaharlal Nehru Engineering College",
+      description: 'Undergraduate degree specializing in AI, Machine Learning, Statistical Inference, and Database Systems, alongside an intensive minor in Business Analytics. Focus on operations research, prescriptive analytics, data lifecycle management, and translating technical AI metrics into business ROI.',
+      skills: ['Machine Learning', 'Business Analytics', 'Operations Research', 'SQL', 'Python', 'Tableau / BI', 'Data Lifecycle'],
       isCurrent: true,
     },
     {
-      period: '2024 – 2025',
-      role: 'Full-Stack Developer',
-      company: 'Digital Solutions Lab',
-      description: 'Engineered responsive web applications and RESTful microservices. Spearheaded state management overhauls, database query optimizations, and seamless third-party payment integrations.',
-      skills: ['React', 'Node.js', 'MongoDB', 'Redis', 'Tailwind CSS', 'AWS S3'],
+      period: '2024 – PRESENT',
+      role: 'Lead Systems Architect & Developer',
+      company: 'Quick-Commerce Dark Store Ecosystem (v4.0)',
+      description: 'Engineered an autonomous 10-minute grocery fulfillment simulation across 12 hubs in Chhatrapati Sambhajinagar. Implemented S-curve warehouse route heuristics (42% travel reduction), sub-3s OSRM spatial dispatch, and PyDeck 3D operations telemetry.',
+      skills: ['FastAPI', 'OSRM Graph', 'PyDeck 3D', 'Supabase', 'Streamlit', 'PostGIS', 'NumPy'],
     },
     {
-      period: '2023 – 2024',
-      role: 'Software Engineering Fellow',
-      company: 'Tech Innovations Studio',
-      description: 'Built interactive frontend components and dashboard tooling. Contributed to unit testing suites, automated CI/CD deployment pipelines, and UI/UX accessibility improvements.',
-      skills: ['React', 'JavaScript', 'Python', 'Git', 'REST APIs', 'Postman'],
+      period: '2024 – PRESENT',
+      role: 'Full-Stack & Product Analytics Builder',
+      company: 'Applied AI & Autonomous Projects',
+      description: 'Architecting responsive web applications, automated business intelligence dashboards, and RESTful microservices. Spearheading state management overhauls, database query optimizations, and seamless cloud deployments.',
+      skills: ['Next.js 14', 'TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Docker', 'Git'],
     },
   ];
 
@@ -49,13 +49,13 @@ export default function ExperienceSection() {
     >
       <div className="text-center max-w-4xl mx-auto mb-20">
         <p className="font-orbitron text-[10px] font-bold tracking-[0.3em] text-[#FF6B35] mb-3 uppercase">
-          WORK HISTORY
+          EDUCATION &amp; MILESTONES
         </p>
         <h2 className="font-orbitron font-black text-4xl md:text-6xl text-white tracking-[0.1em] uppercase">
           EXPERIENCE
         </h2>
         <p className="mt-3 text-sm text-white/40 max-w-md mx-auto font-inter">
-          A track record of engineering scalable platforms and cutting-edge software.
+          Academic rigor in AI &amp; Business Analytics combined with production systems engineering.
         </p>
       </div>
 

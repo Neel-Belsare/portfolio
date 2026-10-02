@@ -90,14 +90,14 @@ export default function VideoIntro() {
         </h1>
 
         <p className="mt-6 font-orbitron text-xs md:text-sm tracking-[0.22em] text-white/70 max-w-2xl uppercase">
-          Full-Stack Engineer · AI Systems · Product Architect
+          AI Systems · Prescriptive Analytics · Data Products
         </p>
 
         {/* Quick stat pill */}
         <div className="mt-8 flex items-center gap-6 text-xs text-white/60 font-inter">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-            <span className="text-white/80 font-medium">Available for select projects</span>
+            <span className="text-white/80 font-medium">Available for Data Product &amp; Analytics roles</span>
           </div>
           <span className="hidden sm:inline text-white/30">•</span>
           <span className="hidden sm:inline">Based in India</span>

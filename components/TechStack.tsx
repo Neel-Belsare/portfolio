@@ -16,6 +16,7 @@ export default function TechStack() {
     // Languages
     { name: 'Python', iconClass: 'devicon-python-plain colored', category: 'languages' },
     { name: 'TypeScript', iconClass: 'devicon-typescript-plain colored', category: 'languages' },
+    { name: 'SQL', iconClass: 'devicon-postgresql-plain colored', category: 'languages' },
     { name: 'JavaScript', iconClass: 'devicon-javascript-plain colored', category: 'languages' },
     { name: 'C++', iconClass: 'devicon-cplusplus-plain colored', category: 'languages' },
     { name: 'C', iconClass: 'devicon-c-plain colored', category: 'languages' },
@@ -28,32 +29,36 @@ export default function TechStack() {
     { name: 'Next.js', iconClass: 'devicon-nextjs-plain text-white', category: 'frameworks' },
     { name: 'Node.js', iconClass: 'devicon-nodejs-plain colored', category: 'frameworks' },
     { name: 'FastAPI', iconClass: 'devicon-fastapi-plain colored', category: 'frameworks' },
+    { name: 'Streamlit', customIcon: '📊', category: 'frameworks' },
     { name: 'Tailwind', iconClass: 'devicon-tailwindcss-plain colored', category: 'frameworks' },
     { name: 'Redux', iconClass: 'devicon-redux-original colored', category: 'frameworks' },
     { name: 'Express', iconClass: 'devicon-express-original text-white', category: 'frameworks' },
-    { name: 'Django', iconClass: 'devicon-django-plain colored', category: 'frameworks' },
 
     // AI & Machine Learning
+    { name: 'NumPy', iconClass: 'devicon-numpy-original colored', category: 'ai' },
+    { name: 'Pandas', iconClass: 'devicon-pandas-original colored', category: 'ai' },
+    { name: 'Scikit-learn', iconClass: 'devicon-scikitlearn-plain colored', category: 'ai' },
     { name: 'LangChain', customIcon: '🦜', category: 'ai' },
     { name: 'Groq LLaMA', customIcon: '⚡', category: 'ai' },
     { name: 'Qdrant RAG', customIcon: '🎯', category: 'ai' },
     { name: 'PyTorch', iconClass: 'devicon-pytorch-original colored', category: 'ai' },
     { name: 'TensorFlow', iconClass: 'devicon-tensorflow-original colored', category: 'ai' },
     { name: 'OpenCV', iconClass: 'devicon-opencv-plain colored', category: 'ai' },
-    { name: 'Scikit-learn', iconClass: 'devicon-scikitlearn-plain colored', category: 'ai' },
-    { name: 'Pandas', iconClass: 'devicon-pandas-original colored', category: 'ai' },
 
     // Databases & Cloud
     { name: 'PostgreSQL', iconClass: 'devicon-postgresql-plain colored', category: 'cloud_db' },
+    { name: 'PostGIS', customIcon: '🗺️', category: 'cloud_db' },
+    { name: 'Supabase', iconClass: 'devicon-supabase-plain colored', category: 'cloud_db' },
     { name: 'MongoDB', iconClass: 'devicon-mongodb-plain colored', category: 'cloud_db' },
     { name: 'Redis', iconClass: 'devicon-redis-plain colored', category: 'cloud_db' },
     { name: 'AWS', iconClass: 'devicon-amazonwebservices-plain-wordmark colored', category: 'cloud_db' },
     { name: 'Docker', iconClass: 'devicon-docker-plain colored', category: 'cloud_db' },
     { name: 'Vercel', iconClass: 'devicon-vercel-original text-white', category: 'cloud_db' },
-    { name: 'Supabase', iconClass: 'devicon-supabase-plain colored', category: 'cloud_db' },
     { name: 'Firebase', iconClass: 'devicon-firebase-plain colored', category: 'cloud_db' },
 
     // Creative & Dev Tools
+    { name: 'Tableau / BI', customIcon: '📈', category: 'tools' },
+    { name: 'PyDeck 3D', customIcon: '🛰️', category: 'tools' },
     { name: 'Three.js', iconClass: 'devicon-threejs-original text-white', category: 'tools' },
     { name: 'Git', iconClass: 'devicon-git-plain colored', category: 'tools' },
     { name: 'GitHub', iconClass: 'devicon-github-original text-white', category: 'tools' },

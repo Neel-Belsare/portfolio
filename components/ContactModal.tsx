@@ -15,7 +15,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   if (!isOpen) return null;
 
-  const email = 'neelkiranbelsare@gmail.com';
+  const email = 'neelbelsaredpvn@gmail.com';
 
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -50,7 +50,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           Let&apos;s Build Something Iconic
         </h3>
         <p className="text-sm text-white/50 mb-6 font-inter">
-          Available for innovative product roles, AI system consulting, or high-velocity engineering contracts.
+          Available for Data Product roles, Business Intelligence engineering, or innovative analytics opportunities.
         </p>
 
         {/* Quick Email Pill */}
