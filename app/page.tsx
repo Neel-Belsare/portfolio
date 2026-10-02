@@ -12,6 +12,7 @@ import ExperienceSection from '@/components/ExperienceSection';
 import SocialStats from '@/components/SocialStats';
 import Footer from '@/components/Footer';
 import ContactModal from '@/components/ContactModal';
+import AvatarWidget from '@/components/AvatarWidget';
 
 export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -53,6 +54,9 @@ export default function Home() {
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
       />
+
+      {/* 3D Interactive Avatar Assistant Widget */}
+      <AvatarWidget onOpenContact={() => setIsContactOpen(true)} />
     </main>
   );
 }

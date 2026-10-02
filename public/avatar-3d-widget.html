@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neel Belsare | 3D Avatar Interactive Widget</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            margin: 0; 
+            overflow-x: hidden; 
+            font-family: 'Inter', sans-serif; 
+            background-color: #0a0a0c;
+            color: #ffffff;
+        }
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        
+        #widget-container {
+            pointer-events: none;
+        }
+        #widget-container > * {
+            pointer-events: auto;
+        }
+        #three-canvas {
+            width: 220px;
+            height: 280px;
+            outline: none;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.8));
+        }
+        .glow-accent {
+            box-shadow: 0 0 25px rgba(255, 107, 53, 0.35);
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0c] text-white selection:bg-[#FF6B35] selection:text-black">
+
+    <!-- Mock Portfolio Header -->
+    <header class="bg-[#0a0a0c]/90 border-b border-white/10 sticky top-0 z-10 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-black font-orbitron text-white tracking-[0.18em]">
+                NEEL<span class="text-[#FF6B35]">.</span>
+            </h1>
+            <nav class="space-x-8 text-xs font-medium uppercase tracking-wider text-white/70">
+                <a href="#about" class="hover:text-[#FF6B35] transition">About</a>
+                <a href="#projects" class="hover:text-[#FF6B35] transition">Projects</a>
+                <a href="#tech" class="hover:text-[#FF6B35] transition">Tech Stack</a>
+                <a href="mailto:neelbelsaredpvn@gmail.com" class="px-4 py-2 rounded-full border border-[#FF6B35]/60 bg-[#FF6B35]/10 text-[#FF6B35] font-orbitron hover:bg-[#FF6B35] hover:text-black transition">Let's Talk</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Preview -->
+    <main class="max-w-5xl mx-auto px-6 py-16 space-y-24">
+        <section class="text-center space-y-6 pt-12">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#FF6B35]/30 bg-[#FF6B35]/10 text-[#FF6B35] text-xs font-orbitron font-bold tracking-widest uppercase">
+                Interactive 3D Assistant Widget Demo
+            </div>
+            <h2 class="text-5xl md:text-6xl font-black font-orbitron tracking-tight text-white leading-tight uppercase">
+                NEEL BELSARE <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] via-[#FF8A50] to-[#FFA066]">3D AVATAR ASSISTANT</span>
+            </h2>
+            <p class="text-base text-white/70 max-w-2xl mx-auto font-inter">
+                B.Tech in Artificial Intelligence &amp; Data Science (Minor in Business Analytics).
+                <br>Move your cursor around the screen — Neel's 3D avatar tracks your movements in real-time!
+            </p>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white/[0.02] border border-white/10 p-8 rounded-2xl relative space-y-3">
+                <span class="text-2xl">⚡</span>
+                <h3 class="text-lg font-bold font-orbitron text-white">3D Spatial Tracking</h3>
+                <p class="text-xs text-white/60 leading-relaxed font-inter">
+                    Tracks the user's cursor across screen coordinates with realistic head &amp; torso rotational lerping and dynamic light casting.
+                </p>
+            </div>
+            <div class="bg-white/[0.02] border border-white/10 p-8 rounded-2xl relative space-y-3">
+                <span class="text-2xl">🏬</span>
+                <h3 class="text-lg font-bold font-orbitron text-[#FF6B35]">Dark Store Ecosystem (v4.0)</h3>
+                <p class="text-xs text-white/60 leading-relaxed font-inter">
+                    Autonomous 10-minute grocery delivery network across 12 micro-fulfillment hubs serving 1.91M citizens in Chhatrapati Sambhajinagar.
+                </p>
+            </div>
+        </section>
+        
+        <div class="h-40"></div>
+    </main>
+
+    <!-- 3D Widget Container (Fixed Bottom Right) -->
+    <div id="widget-container" class="fixed bottom-4 right-4 flex items-end gap-3 z-50">
+        
+        <!-- Emote Controls Panel -->
+        <div id="controls-panel" class="bg-[#121216]/95 backdrop-blur-md p-3.5 rounded-2xl shadow-2xl border border-white/10 flex flex-col gap-2 mb-4 opacity-0 transform translate-y-4 transition-all duration-300 pointer-events-none w-44">
+            <div class="text-[10px] font-orbitron font-bold text-[#FF6B35] tracking-widest uppercase mb-1 text-center">
+                Neel Assistant
+            </div>
+            <button onclick="triggerEmote('wave')" class="bg-white/[0.04] hover:bg-[#FF6B35]/20 text-white text-xs px-3 py-2 rounded-xl font-medium transition-colors border border-white/5 hover:border-[#FF6B35]/30 flex items-center gap-2 cursor-pointer">
+                <span>👋</span> <span>Wave &amp; Greet</span>
+            </button>
+            <button onclick="triggerEmote('jump')" class="bg-white/[0.04] hover:bg-emerald-500/20 text-white text-xs px-3 py-2 rounded-xl font-medium transition-colors border border-white/5 hover:border-emerald-500/30 flex items-center gap-2 cursor-pointer">
+                <span>✨</span> <span>Jump &amp; Cheer</span>
+            </button>
+            <button onclick="triggerEmote('talk')" class="bg-white/[0.04] hover:bg-blue-500/20 text-white text-xs px-3 py-2 rounded-xl font-medium transition-colors border border-white/5 hover:border-blue-500/30 flex items-center gap-2 cursor-pointer">
+                <span>💡</span> <span>Quick Bio</span>
+            </button>
+        </div>
+
+        <!-- 3D Canvas / Avatar Frame -->
+        <div class="relative group cursor-pointer" onclick="toggleControls()">
+            <!-- Tooltip -->
+            <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-black/90 border border-white/10 text-white text-[11px] font-orbitron font-semibold py-1 px-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg">
+                Click me! ✨
+            </div>
+
+            <!-- Speech Bubble -->
+            <div id="speech-bubble" class="absolute -top-16 right-0 bg-[#121216]/95 border border-[#FF6B35]/50 px-3.5 py-2 rounded-xl text-xs font-inter text-white shadow-xl opacity-0 transform translate-y-2 transition-all duration-300 pointer-events-none whitespace-nowrap">
+                <span id="speech-text">Hey there! 👋</span>
+            </div>
+
+            <div id="three-canvas" class="relative rounded-2xl flex items-end justify-center overflow-visible"></div>
+        </div>
+    </div>
+
+    <script>
+        // -------------------------
+        // UI & State Management
+        // -------------------------
+        let controlsVisible = false;
+        function toggleControls() {
+            const panel = document.getElementById('controls-panel');
+            controlsVisible = !controlsVisible;
+            if (controlsVisible) {
+                panel.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+                panel.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+            } else {
+                panel.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                panel.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            }
+        }
+
+        function showSpeech(text, duration = 3500) {
+            const bubble = document.getElementById('speech-bubble');
+            const speechText = document.getElementById('speech-text');
+            speechText.innerText = text;
+            bubble.classList.remove('opacity-0', 'translate-y-2');
+            bubble.classList.add('opacity-100', 'translate-y-0');
+            setTimeout(() => {
+                bubble.classList.remove('opacity-100', 'translate-y-0');
+                bubble.classList.add('opacity-0', 'translate-y-2');
+            }, duration);
+        }
+
+        // -------------------------
+        // Three.js Setup
+        // -------------------------
+        const container = document.getElementById('three-canvas');
+        const scene = new THREE.Scene();
+        
+        const camera = new THREE.PerspectiveCamera(40, container.clientWidth / container.clientHeight, 0.1, 100);
+        camera.position.set(0, 0, 5.5);
+
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        container.appendChild(renderer.domElement);
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.85);
+        scene.add(ambientLight);
+
+        const pointLight = new THREE.PointLight(0xff6b35, 1.5, 10);
+        pointLight.position.set(2, 3, 3);
+        scene.add(pointLight);
+
+        const rimLight = new THREE.PointLight(0xffaa66, 1.2, 10);
+        rimLight.position.set(-2, 1, 2);
+        scene.add(rimLight);
+
+        // Character Main Group
+        const characterGroup = new THREE.Group();
+        scene.add(characterGroup);
+
+        // Holographic Glowing Base Ring
+        const ringGeo = new THREE.RingGeometry(0.85, 1.05, 32);
+        const ringMat = new THREE.MeshBasicMaterial({ 
+            color: 0xff6b35, 
+            side: THREE.DoubleSide, 
+            transparent: true, 
+            opacity: 0.5 
+        });
+        const ring = new THREE.Mesh(ringGeo, ringMat);
+        ring.rotation.x = Math.PI / 2;
+        ring.position.y = -1.55;
+        characterGroup.add(ring);
+
+        // Load Neel's 3D Avatar Texture
+        const textureLoader = new THREE.TextureLoader();
+        let avatarMesh;
+
+        textureLoader.load('./images/avatar_cutout.png', (texture) => {
+            texture.generateMipmaps = true;
+            texture.minFilter = THREE.LinearMipmapLinearFilter;
+            
+            // Plane with aspect ratio matching avatar cutout (896 x 1200 => 0.746)
+            const planeGeo = new THREE.PlaneGeometry(2.3, 3.08);
+            const planeMat = new THREE.MeshStandardMaterial({
+                map: texture,
+                transparent: true,
+                roughness: 0.4,
+                metalness: 0.1,
+                side: THREE.DoubleSide
+            });
+
+            avatarMesh = new THREE.Mesh(planeGeo, planeMat);
+            avatarMesh.position.y = 0.05;
+            characterGroup.add(avatarMesh);
+        });
+
+        // -------------------------
+        // Mouse Tracking
+        // -------------------------
+        const mouse = { x: 0, y: 0 };
+        const targetRot = { x: 0, y: 0 };
+
+        window.addEventListener('mousemove', (event) => {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+            targetRot.y = mouse.x * 0.35; // ~20 degrees left/right
+            targetRot.x = -mouse.y * 0.20; // ~11 degrees up/down
+        });
+
+        // -------------------------
+        // Emote Actions
+        // -------------------------
+        let isWaving = false;
+        let isJumping = false;
+        let animationTime = 0;
+
+        window.triggerEmote = function(type) {
+            if (type === 'wave') {
+                isWaving = true;
+                animationTime = 0;
+                showSpeech("Hey there! Welcome to my portfolio! 👋");
+            } else if (type === 'jump') {
+                isJumping = true;
+                animationTime = 0;
+                showSpeech("Ready to architect high-impact AI systems! 🚀");
+            } else if (type === 'talk') {
+                showSpeech("AI & Data Science @ MGM JNEC with a Minor in Business Analytics! 💡");
+            }
+        };
+
+        // -------------------------
+        // Render & Animation Loop
+        // -------------------------
+        const clock = new THREE.Clock();
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const delta = clock.getDelta();
+            const elapsed = clock.getElapsedTime();
+
+            // 1. Mouse Lerp
+            characterGroup.rotation.y += (targetRot.y - characterGroup.rotation.y) * 0.08;
+            characterGroup.rotation.x += (targetRot.x - characterGroup.rotation.x) * 0.08;
+
+            // Idle floating
+            if (!isJumping) {
+                characterGroup.position.y = Math.sin(elapsed * 2.2) * 0.08;
+            }
+
+            // Pulse holographic ring
+            ring.scale.setScalar(1 + Math.sin(elapsed * 3) * 0.06);
+
+            // 2. Wave Emote (tilt rocking motion + scale pulse)
+            if (isWaving) {
+                animationTime += delta;
+                if (animationTime < 2.5) {
+                    characterGroup.rotation.z = Math.sin(animationTime * 12) * 0.12;
+                } else {
+                    characterGroup.rotation.z = 0;
+                    isWaving = false;
+                }
+            }
+
+            // 3. Jump Emote
+            if (isJumping) {
+                animationTime += delta;
+                const jumpDuration = 1.0;
+                if (animationTime < jumpDuration) {
+                    const jumpArc = Math.sin((animationTime / jumpDuration) * Math.PI);
+                    characterGroup.position.y = jumpArc * 0.9;
+                    characterGroup.scale.setScalar(1 + jumpArc * 0.08);
+                } else {
+                    characterGroup.position.y = 0;
+                    characterGroup.scale.set(1, 1, 1);
+                    isJumping = false;
+                }
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Responsive Resizing
+        window.addEventListener('resize', () => {
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        });
+
+        // Initial welcome speech
+        setTimeout(() => {
+            showSpeech("Hi! Click me to interact! ✨", 4000);
+        }, 1200);
+    </script>
+</body>
+</html>
