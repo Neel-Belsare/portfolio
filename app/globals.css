@@ -70,3 +70,24 @@ body {
 .pulse-glow {
   animation: pulseGlow 4s ease-in-out infinite;
 }
+
+/* Avatar widget — hand-only wave (arm stays still, only hand swings) */
+@keyframes wave-hand {
+  0%   { transform: rotate(-20deg); }
+  100% { transform: rotate(30deg); }
+}
+
+/* Continuous CSS Antigravity Floating Effect */
+@keyframes antigravity {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(0.8deg);
+  }
+}
+
+.antigravity-float {
+  animation: antigravity 4.5s ease-in-out infinite;
+  will-change: transform;
+}

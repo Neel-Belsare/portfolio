@@ -248,19 +248,27 @@ export default function AvatarWidget({ onOpenContact }: AvatarWidgetProps) {
               }}
             />
 
-            {/* Avatar Graphics: switches to waving GIF when waving */}
-            {/* key prop forces DOM remount so GIF restarts from frame 1 every time */}
-            <img
-              key={isWaving ? 'avatar-waving' : 'avatar-idle'}
-              src={
-                isWaving
-                  ? getAssetPath('/images/avatar_waving.gif')
-                  : getAssetPath('/images/avatar_cutout.png')
-              }
-              alt="Neel Belsare 3D Avatar"
-              className="w-full h-full object-contain object-bottom select-none filter drop-shadow-[0_12px_20px_rgba(0,0,0,0.7)] group-hover:drop-shadow-[0_0_20px_rgba(255,107,53,0.4)] transition-all duration-200"
-              draggable={false}
-            />
+            {/* When waving: dynamically replaces static image with greeting video */}
+            {isWaving ? (
+              <video
+                src={getAssetPath('/video/gemini_greeting.mp4')}
+                autoPlay
+                muted
+                playsInline
+                controls={false}
+                onEnded={() => setIsWaving(false)}
+                onError={() => setIsWaving(false)}
+                className="w-full h-full object-cover object-top select-none rounded-2xl"
+              />
+            ) : (
+              /* Idle state: static 3D avatar image with floating effect */
+              <img
+                src={getAssetPath('/images/avatar_cutout.png')}
+                alt="Neel Belsare 3D Avatar"
+                className="w-full h-full object-contain object-bottom select-none filter drop-shadow-[0_12px_20px_rgba(0,0,0,0.7)] group-hover:drop-shadow-[0_0_20px_rgba(255,107,53,0.4)] transition-all duration-200"
+                draggable={false}
+              />
+            )}
           </div>
 
           {/* Interactive Badge Indicator */}

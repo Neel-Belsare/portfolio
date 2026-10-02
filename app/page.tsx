@@ -13,6 +13,7 @@ import SocialStats from '@/components/SocialStats';
 import Footer from '@/components/Footer';
 import ContactModal from '@/components/ContactModal';
 import AvatarWidget from '@/components/AvatarWidget';
+import AvatarHeroSection from '@/components/AvatarHeroSection';
 
 export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -27,6 +28,9 @@ export default function Home() {
 
       {/* Signature Name Reveal Section with Cutout */}
       <NameReveal />
+
+      {/* 3D Avatar Antigravity Section with 'Hi' Video Greeting */}
+      <AvatarHeroSection onOpenContact={() => setIsContactOpen(true)} />
 
       {/* About Section with Typewriter Bio & Metric Counters */}
       <AboutSection />
