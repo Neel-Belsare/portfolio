@@ -12,6 +12,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [copied, setCopied] = useState(false);
   const [sent, setSent] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   if (!isOpen) return null;
 
@@ -23,13 +25,42 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => {
-      setSent(false);
-      onClose();
-    }, 2500);
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSent(true);
+        setTimeout(() => {
+          setSent(false);
+          onClose();
+        }, 2500);
+      } else {
+        setError(result.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setError('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -118,11 +149,16 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               />
             </div>
 
+            {error && (
+              <p className="text-red-400 text-xs text-center font-inter">{error}</p>
+            )}
+
             <button
               type="submit"
-              className="w-full py-3 rounded-xl bg-[#FF6B35] text-black font-orbitron font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-[#FF8454] transition-colors shadow-lg cursor-pointer"
+              disabled={isSubmitting}
+              className="w-full py-3 rounded-xl bg-[#FF6B35] text-black font-orbitron font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-[#FF8454] transition-colors shadow-lg cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message <Send size={14} />
+              {isSubmitting ? 'Sending...' : 'Send Message'} {!isSubmitting && <Send size={14} />}
             </button>
           </form>
         )}
