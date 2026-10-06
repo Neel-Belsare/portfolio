@@ -14,6 +14,9 @@ import Footer from '@/components/Footer';
 import ContactModal from '@/components/ContactModal';
 import AvatarWidget from '@/components/AvatarWidget';
 import AvatarHeroSection from '@/components/AvatarHeroSection';
+import ResumeSection from '@/components/ResumeSection';
+import GitHubLiveStats from '@/components/GitHubLiveStats';
+import SkillsRadarChart from '@/components/SkillsRadarChart';
 
 export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -38,17 +41,28 @@ export default function Home() {
       {/* Flagship Quick-Commerce Dark Store System Showcase */}
       <ProjectsSection />
 
+      {/* Flagship Project & Technical Resume */}
+      <ResumeSection />
+
       {/* Technical Engineering Blog Section */}
       <BlogSection />
 
       {/* Interactive Tech Stack Matrix */}
       <TechStack />
+      
+      <div className="max-w-6xl mx-auto px-6 md:px-16">
+        <SkillsRadarChart />
+      </div>
 
       {/* Experience History Timeline */}
       <ExperienceSection />
 
       {/* GitHub & Engineering Stats */}
       <SocialStats />
+
+      <div className="max-w-6xl mx-auto px-6 md:px-16 pb-24">
+        <GitHubLiveStats />
+      </div>
 
       {/* Footer */}
       <Footer />
