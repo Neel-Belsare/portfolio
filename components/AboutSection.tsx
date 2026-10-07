@@ -56,7 +56,7 @@ export default function AboutSection() {
             <Linkedin size={20} />
           </a>
           <a
-            href="mailto:neelbelsare28@gmail.com"
+            href="mailto:neelbelsaredpvn@gmail.com"
             className="text-xl text-black/40 hover:text-[#FF6B35] transition-colors"
             aria-label="Email"
           >

@@ -1,30 +1,32 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { ExternalLink, Flame, Star, GitFork, BookOpen } from 'lucide-react';
 import { getAssetPath } from '@/lib/asset';
 
-async function fetchGitHubData() {
-  try {
-    const userRes = await fetch('https://api.github.com/users/Neel-Belsare', {
-      next: { revalidate: 3600 } // Revalidate every hour
-    });
-    const reposRes = await fetch('https://api.github.com/users/Neel-Belsare/repos?sort=updated&per_page=3', {
-      next: { revalidate: 3600 }
-    });
-    
-    if (!userRes.ok || !reposRes.ok) return null;
-    
-    const user = await userRes.json();
-    const repos = await reposRes.json();
-    return { user, repos };
-  } catch (error) {
-    return null;
-  }
-}
+export default function GitHubLiveStats() {
+  const [data, setData] = useState<{ user: any; repos: any } | null>(null);
 
-export default async function GitHubLiveStats() {
-  const data = await fetchGitHubData();
+  useEffect(() => {
+    async function fetchGitHubData() {
+      try {
+        const userRes = await fetch('https://api.github.com/users/Neel-Belsare');
+        const reposRes = await fetch('https://api.github.com/users/Neel-Belsare/repos?sort=updated&per_page=3');
+        
+        if (!userRes.ok || !reposRes.ok) return;
+        
+        const user = await userRes.json();
+        const repos = await reposRes.json();
+        setData({ user, repos });
+      } catch (error) {
+        console.error('Failed to fetch GitHub data:', error);
+      }
+    }
+    fetchGitHubData();
+  }, []);
   
-  if (!data) return null; // Fallback if API fails
+  if (!data) return null; // Fallback if API fails or while loading
+
   
   return (
     <div className="rounded-2xl p-6 md:p-10 bg-white/[0.02] border border-white/10 mt-6">
