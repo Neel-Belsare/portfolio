@@ -17,7 +17,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   if (!isOpen) return null;
 
-  const email = 'neelbelsaredpvn@gmail.com';
+  const email = 'neelbelsare28@gmail.com';
 
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
